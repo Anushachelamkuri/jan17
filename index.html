@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <title> </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div>
+        </div>
+        <p style="text-align: right;">(281-285)pages</p>
+        <ul style="text-align:start";>
+        <center>
+        <P>&nbsp;&nbsp;&nbsp;&nbsp;text for the owner’s name, address, e-mail, etc. The ever-increasing numbers of electronically available documents have intensified research on mining text for structure. Texts
+are typically divided into three broad categories: free, structured, and semi-structure.</P>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;If we view texts as islands of content, then free texts can be viewed as content
+islands without any road maps. To discover a road map in a free text requires a certain
+amount of data mining through parsing, statistical analysis, or machine learning. Many
+USENET FAQs and journal articles are good examples of free texts.</P>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Structured texts are information islands whose content is organized according to
+a specific road map. Relational databases are a good example of structured texts where
+all of the relations between textual entities, i.e., records, are known and can be readily
+obtained through well-defined queries. In effect, in a structured text most of the structural
+data mining has been done.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Semi-structured texts cluster around the borderline between free and structured.
+Generally speaking, a semi-structured text offers more structure than a free text but less
+than a structured one. HTML pages are a good example of semi-structured texts. While
+they offer a standard set of tags that point to the structural organization of information
+in them, they do not specify the types of information that the tags can label. For example,
+an HTML list can contain names of people, phone numbers, top stories of the day, etc.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Current research efforts in structural text mining combine techniques of machine
+learning, natural language processing, and information retrieval. Many machine-learning
+approaches to text mining are based on the ideas of inductive learning (Mitchell, 1997).
+The problem of mining text for structure is cast in terms of taking a set of text instances
+representative of the general population of texts to be mined and extracting sets of rules
+from those instances. Approaches that use natural language processing (Allen, 1987)
+typically view texts as objects having a structure that can be discovered through parsing.
+The problem is stated in terms of a set of constraints that a given domain of texts exhibits
+and a means to use those constraints in finding text structure. Finally, informationretrieval approaches are based on the idea that texts are intellectual artifacts that consist
+of words related to each other semantically in a number of complex ways. The intellectual
+process of producing texts incidentally leaves behind simple statistical regularities
+(Hearst, 1997). Capturing those regularities through statistical analysis allows one to
+arrive at the structural organization of information in the texts.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Many authors are concerned with the problem of extracting database-like structures
+from Web pages, in effect reverse-engineering the process of database-backed Web
+page generation. Hammer et al. (1997) present a configurable tool for extracting semistructured data from a set of HTML pages, given a declarative specification of where the
+data of interest is located. Creating such a specification can be a tedious process,
+however, and may require an extensive knowledge-engineering effort. The machinelearning approach to this problem has been labeled “wrapper induction” (Kushmerick et
+al., 1997). The extraction procedure, or wrapper, for a specific resource is learned from
+a set of representative pages from that resource. Several classes of wrappers have been
+                identified that are both useful and efficiently learnable.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Hsu and Chang (1999) apply several aspects of automata theory to the problem of
+constructing information extractors for mining semi-structured documents. By semistructured documents the authors mean HTML pages. The main argument of the
+proposed research framework rests on the idea that programming information extractors
+manually is not feasible due to the amount and degree of variation in information placed
+            on the World Wide Web on a daily basis. The authors propose a machine-learning
+approach to the automated construction of such extractors. The approach is based on
+learning an extractor from a few examples of information extraction cases.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;
+Hsu and Chang (1999) describe a formalism that represents extractors as Finite-State
+Transducers (FST). A finite-state transducer is a variation of a finite-state automaton
+(Hopcroft & Ullman, 1979). The input document is assumed to be tokenized before it is
+given to a finite-state transducer. The authors distinguish two types of transducers:
+single-pass and multi-pass. A single-pass transducer scans the text only once. A multipass transducer scans the text many times, each time focusing only on a specific type
+of object to extract. The ultimate goal of the approach proposed by Hsu and Chang (1999)
+is the automated construction of extractors from a set of training examples. However, the
+reported empirical evaluations assume that the space of possible graph structures, i.e.,
+finite-state automata, is restricted or that the structure is given to the learner in advance.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Freitag (1998) also casts information extraction as a machine-learning problem. It is
+argued that one solution to that problem is relational learning. Relational learning
+represents hypotheses as sets of if-then rules. Because sets of if-then statements can
+be viewed as programs in a logic programming language, such as PROLOG, relational
+learning is often called Inductive Logic Programming (Mitchell, 1997). Freitag describes
+a general-purpose top-down relational learning algorithm for information extraction
+called “SRV.” SRV takes as input a set of token-oriented features that encode most of the
+domain-specific information. For example, they may encode a standard set of questions
+that can be asked of someone’s home page, such as the owner’s name, affiliation, e-mail,</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Figure 1: How FAQ Finder works.</p>
+            <img src="task%2017%20image.png">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;etc. An answer to each question is assumed to be a text fragment from that home page.
+Thus, the algorithm solves the problem of finding the best unbroken fragment of text that
+answers a question from a given set of questions. One of the definite advantages of the
+SRV algorithm is that it makes no assumption about document structure. Instead,
+structural information is supplied as input to the system. As a consequence, an argument
+is made that SRV may be better suited for new domains than other systems. The author
+reports a successful evaluation of an SRV-based tool in the domain of university course
+and research project pages. A way is suggested to make the tool Web-aware by extending
+it with HTML-specific features.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Jacquemin and Bush (2000) present a tool for the acquisition of named entities, e.g.,
+names of companies, from textual sources. The authors’ approach combines lexical
+indices with formatting instructions. Lexical indices are discourse markers, and formatting instructions are HTML tags. The system includes three shallow parsers for mining
+HTML texts for specific structures such as lists, enumerations, and anchors. The named
+entities are extracted from the found structures by analyzing discourse markers and
+HTML tags. While Jacquemin and Bush do not use any machine-learning techniques,
+their approach is similar in spirit to the approach advocated in Kushmerick et al. (1997)
+in that it advocates combining structural information about documents with linguistic
+patterns. The system described by Jacquemin and Bush focuses exclusively on HTML
+documents and does not tag anything. Its sole purpose is to build lists of named entities
+found in specified HTML pages.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Hearst (1997) and Hearst and Plaunt (1993) advocate a classic information-retrieval
+approach to mining documents for structure. The approach is called TextTiling.
+TextTiling is a method for partitioning full-length text documents into coherent multiparagraph units. The units form a sequence of subtopical passages. The TextTiling
+algorithm assumes that a document moves from topic to topic. Each topic has its own
+vocabulary associated with it. When one topic changes to a different topic, the
+vocabulary changes, too. Consequently, sharp changes in the vocabulary signify
+boundaries between the elements of a document structure. The algorithm completely
+ignores all lexical markers provided by the document authors.</p><br>
+            </center>
+            <h1>MINING NEWSGROUPS’ EXPERTISE</h1>
+            <center>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Over the past several years, the Internet has seen a proliferation of newsgroups.
+A newsgroup is started by individuals interested in a topic, e.g., caffeine or cars. These
+individuals, who are experts on the topic, want to make their expertise publicly available,
+which they accomplish through the newsgroup’s FAQ.</p><br>
+            </center>
+            <h2>Looking for Answers to Transient Questions</h2>
+            <center>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Newsgroup-based expertise distribution works for people with a stable interest in
+the newsgroup’s topic. However, many people have more transient interests. Typically, such
+transient interests are caused by questions whose answers are beyond an information
+seeker’s area of expertise. There are three types of problems that information seekers with
+transient interests confront: insufficient knowledge, insufficient time, and privacy.</p>
+            <P>&nbsp;&nbsp;&nbsp;&nbsp;Let us illustrate these problems with an example. Consider a college student, who
+wants to write a report on the therapeutic effects of caffeine. The student may not know
+about the coffee newsgroup. This lack of knowledge may cause the student to spend
+much time searching for the newsgroup. Even if the student already knows about the
+newsgroup, his interest in finding an answer to his question does not necessarily mean
+that he is interested in subscribing to the newsgroup and subsequently reading a dozen
+messages a day, most of which have nothing to do with his question.</P>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Even if the student knows about the newsgroup’s FAQ, the student may not have
+the time to browse for an answer. This is because many newsgroups have FAQs
+containing hundreds and sometimes thousands of question-answer pairs (Q&A’s) and
+provide no search or browsing tools to mine those Q&A’s.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Finally, the student may be concerned about privacy. If he posts a question to the
+newsgroup, his name will be read by hundreds, possibly thousands, of subscribers. Some
+newsgroups are known for their inflammatory nature and are not friendly to novices or
+casual posters.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;These problems signify a need for a system that provides Web and Internet users
+with a gateway to the newsgroups’ expertise. Users who do not know a relevant
+newsgroup should not spend much time searching for it. Users with transient interests
+in the newsgroup’s topic should not have to make unwanted commitments to obtain
+answers.</p><br>
+            </center>
+            <h2>Outline of a Solution</h2>
+            <center>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;FAQ Finder was developed to meet this need for a gateway to the newsgroups’
+expertise (Burke et al., 1997). The question-answering task is conceptualized as the
+retrieval of answers to similar questions answered previously. To answer a new question
+is to choose a suitable Q&A collection, i.e., a set of FAQs, and to retrieve from it the
+answer to a similar question. There is a substantial literature on FAQ Finder (Burke,
+Hammond, & Cooper, 1996; Burke, Hammond, & Young, 1996; Kulyukin, 1998a, 1998b).
+Here we only offer an outline of the system, because it grounds our free-text mining task
+in a proper context.</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;FAQ Finder answers natural language questions from a collection of 602 Usenet
+FAQs. Given a question, FAQ Finder:</p>
+            </center>
+            <li>finds a small set of FAQs relevant to the question;</li>
+            <li>displays short descriptions of those FAQs to the user; and,</li>
+            <li>retrieves a small number of Q&A’s relevant to the question from the chosen FAQ.</li><br>
+            <center>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Figure 1 shows FAQ Finder’s flowchart. The submitted question is mapped to a set
+of FAQs that are potentially relevant to the question (FAQ retrieval). A FAQ from the
+list is chosen either by the client or by the system. For example, if the client chooses the
+quick match option, the top FAQ is selected automatically by the system. The FAQ is
+searched for answers to the question. A list of relevant Q&A’s, if such are found, is
+                returned to the user (Q&A retrieval).</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;The FAQ retrieval is accomplished by the vector space retrieval model (Salton &
+McGill, 1983). Each FAQ is turned into a vector of term weights in a multidimensional
+vector space whose dimensions are the terms found in all of the FAQs in the collection.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Figure 1 shows FAQ Finder’s flowchart. The submitted question is mapped to a set
+of FAQs that are potentially relevant to the question (FAQ retrieval). A FAQ from the
+list is chosen either by the client or by the system. For example, if the client chooses the
+quick match option, the top FAQ is selected automatically by the system. The FAQ is
+searched for answers to the question. A list of relevant Q&A’s, if such are found, is
+returned to the user (Q&A retrieval).</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;The FAQ retrieval is accomplished by the vector space retrieval model (Salton &
+McGill, 1983). Each FAQ is turned into a vector of term weights in a multidimensional
+vector space whose dimensions are the terms found in all of the FAQs in the collection.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;Terms are computed from the free texts of FAQs. Common words, such as “and,” “to,”
+or “from,” are removed. The remaining words become terms through stemming, a
+vocabulary normalization procedure that reduces word forms to their stems (Frakes &
+Baeza-Yates, 1992). For example, “information,” “informed,” “informant,” and “informing” are all reduced to “inform.”
+</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;As a simple example, consider a collection of three FAQs, F1, F2, and F3, where each
+FAQ contains three terms: T1, T2, and T3. We have a three-dimensional vector space, in
+which each vector corresponds to a FAQ and consists of three term weights. A term’s
+weight is a ratio of the term’s frequency in the FAQ and the number of FAQs in which
+it occurs at least once. Each weight is a coordinate along the dimension of the
+corresponding term. A user’s question is turned into a vector in the FAQ vector space.
+The similarity between the question vector and a FAQ vector is computed as the cosine
+of the angle between them. Thus, the smaller the angle, the more relevant the FAQ is to
+the question.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;The Q&A retrieval begins when a FAQ is selected to be searched for answers. The
+Q&A Retriever computes the similarity score between the question and each Q&A in the
+FAQ. The score combines a statistical metric and a semantic metric.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;To compute the statistical similarity, the question is turned into a term weight vector
+in the space of the selected FAQ. The cosine similarity score is computed between the
+question vector and each Q&A vector in the FAQ.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;The semantic similarity is based on recognizing semantic relations among the words
+of the user’s question and the words of a Q&A’s question. Such relations are found
+through WordNet®, a semantic network of English words and phrases developed at
+Princeton University (Miller, 1995). For example, if the user’s question contains “computer” and the Q&A’s question contains “machine,” the two questions are similar
+insomuch as “computer” is connected to “machine” via the isa link in WordNet’s noun
+network (Kulyukin, 1998b). More details on the semantic and statistical similarities are
+provided in the Appendix.</p><br>
+                <h1>MINING FAQS FOR STRUCTURE</h1>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;The operation of FAQ Finder is based on the assumption that a FAQ is a sequence
+of Q&A’s. In reality, however, the system must first find the Q&A’s in the free text of
+the FAQ. Neither retrieval of answers nor their indexing is possible unless the system
+knows which text regions are answers and which are questions.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;One may think that identifying Q&A’s is not a serious problem. A typical argument
+runs as follows. Since questions end in a question mark, it should be possible to use a
+regular expression matcher that retrieves all of the sentences that end with question
+marks.</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;There are two flaws with this argument. First, it assumes that one knows how to
+segment free text into sentences. But, while the identification of sentence boundaries
+may be feasible in small domains with highly constrained texts, it remains a formidable
+challenge for free-text processors that go against large heterogeneous corpora (Charniak,
+1997; Daniels & Rissland, 1995; Palmer & Hearst, 1994). Second, many questions in FAQs
+do not end in question marks, while many answers contain questions that do. Thus, even</p>
+            </center>
+            
+        </ul>
+    </body>
+</html>
