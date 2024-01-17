@@ -36,21 +36,21 @@ representative of the general population of texts to be mined and extracting set
 from those instances. Approaches that use natural language processing (Allen, 1987)
 typically view texts as objects having a structure that can be discovered through parsing.
 The problem is stated in terms of a set of constraints that a given domain of texts exhibits
-and a means to use those constraints in finding text structure. Finally, informationretrieval approaches are based on the idea that texts are intellectual artifacts that consist
+and a means to use those constraints in finding text structure. Finally, information retrieval approaches are based on the idea that texts are intellectual artifacts that consist
 of words related to each other semantically in a number of complex ways. The intellectual
 process of producing texts incidentally leaves behind simple statistical regularities
 (Hearst, 1997). Capturing those regularities through statistical analysis allows one to
 arrive at the structural organization of information in the texts.</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;Many authors are concerned with the problem of extracting database-like structures
 from Web pages, in effect reverse-engineering the process of database-backed Web
-page generation. Hammer et al. (1997) present a configurable tool for extracting semistructured data from a set of HTML pages, given a declarative specification of where the
+page generation. Hammer et al. (1997) present a configurable tool for extracting semi structured data from a set of HTML pages, given a declarative specification of where the
 data of interest is located. Creating such a specification can be a tedious process,
-however, and may require an extensive knowledge-engineering effort. The machinelearning approach to this problem has been labeled “wrapper induction” (Kushmerick et
+however, and may require an extensive knowledge-engineering effort. The machine-learning approach to this problem has been labeled “wrapper induction” (Kushmerick et
 al., 1997). The extraction procedure, or wrapper, for a specific resource is learned from
 a set of representative pages from that resource. Several classes of wrappers have been
                 identified that are both useful and efficiently learnable.</p>
             <p>&nbsp;&nbsp;&nbsp;&nbsp;Hsu and Chang (1999) apply several aspects of automata theory to the problem of
-constructing information extractors for mining semi-structured documents. By semistructured documents the authors mean HTML pages. The main argument of the
+constructing information extractors for mining semi-structured documents. By semi-structured documents the authors mean HTML pages. The main argument of the
 proposed research framework rests on the idea that programming information extractors
 manually is not feasible due to the amount and degree of variation in information placed
             on the World Wide Web on a daily basis. The authors propose a machine-learning
@@ -61,7 +61,7 @@ Hsu and Chang (1999) describe a formalism that represents extractors as Finite-S
 Transducers (FST). A finite-state transducer is a variation of a finite-state automaton
 (Hopcroft & Ullman, 1979). The input document is assumed to be tokenized before it is
 given to a finite-state transducer. The authors distinguish two types of transducers:
-single-pass and multi-pass. A single-pass transducer scans the text only once. A multipass transducer scans the text many times, each time focusing only on a specific type
+single-pass and multi-pass. A single-pass transducer scans the text only once. A multi-pass transducer scans the text many times, each time focusing only on a specific type
 of object to extract. The ultimate goal of the approach proposed by Hsu and Chang (1999)
 is the automated construction of extractors from a set of training examples. However, the
 reported empirical evaluations assume that the space of possible graph structures, i.e.,
@@ -179,7 +179,7 @@ vector space whose dimensions are the terms found in all of the FAQs in the coll
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;Terms are computed from the free texts of FAQs. Common words, such as “and,” “to,”
 or “from,” are removed. The remaining words become terms through stemming, a
 vocabulary normalization procedure that reduces word forms to their stems (Frakes &
-Baeza-Yates, 1992). For example, “information,” “informed,” “informant,” and “informing” are all reduced to “inform.”
+Baeza-Yates, 1992). For example, “information,” “informed,” “informant,” and “informing” are all reduced to “inform.”
 </p>
                 <p>&nbsp;&nbsp;&nbsp;&nbsp;As a simple example, consider a collection of three FAQs, F1, F2, and F3, where each
 FAQ contains three terms: T1, T2, and T3. We have a three-dimensional vector space, in
